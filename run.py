@@ -36,7 +36,7 @@ def login():
         if username in users and users[username]['password'] == password:
             session['user'] = username
             return redirect(url_for('dashboard'))
-        return 'Invalid login'
+        return render_template('login_error.html')
     return render_template('login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -49,7 +49,7 @@ def register():
             users[username] = {
                 'password': password,
                 'balance': 1000,
-                'transactions': []
+                'transactions': [1000, 200, 200]
             }
             save_users(users)
             return redirect(url_for('login'))
