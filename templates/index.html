@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/style.css" />
+    <title>SIMBNK - Virtual Bank</title>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="static/assets/logo.png" alt="Bank Logo" class="logo" />
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="{{ url_for('login') }}" id="login-btn">
+                Login
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to SIMBNK</h1>
+        <p>Your virtual banking method.</p>
+        <button class="cta-btn">Get Started</button>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Why Choose SIMBNK?</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>💳 Easy Transfers</h3>
+                <p>Send and receive money effortlessly with our fast and secure platform.</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Mobile Friendly</h3>
+                <p>Access your account anytime, anywhere with our mobile app.</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Secure Transactions</h3>
+                <p>Your data and transactions are protected with top-tier security.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SIMBNK. All rights reserved.</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
